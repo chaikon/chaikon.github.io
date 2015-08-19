@@ -45,6 +45,72 @@ a{
     float: auto;
 }
 
+button{
+    font-weight: 300;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+
+    font-weight: 300;
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    display: none;
+    margin: 0;
+
+    /****************
+     ** NEW STYLES **
+     ****************/
+
+    list-style: none; /** Remove list bullets */
+    width: 100%; /** Set the width to 100% of it's parent */
+    padding: 0;
+    background-color: green;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: lightgray;
+}
+
+/** Button Styles **/
+.dropdown button {
+    border: none;
+    margin: -1;
+
+    font-family: helvetica;
+    font-weight: lighter;
+    font-size: 12px;
+
+    color: gray;
+    background-color: white;
+}
+
+.dropdown button:hover{
+    color: black;
+}
+
+/** List Item Styles **/
+.dropdown a {
+    display: block;
+    padding: 5px;
+    font-family: helvetica;
+    font-weight: 300;
+    text-decoration: none;
+
+}
+
+/** List Item Hover Styles **/
+.dropdown a:hover {
+
+}
+
+
 </style>
 <body style="background-color:white;text-align:left;font-family:helvetica">
 
@@ -65,8 +131,22 @@ a{
 <a href="asgn.html">A S S I G N M E N T S</a>
 &nbsp&nbsp&nbsp
 <a href="staff.html">S T A F F</a>
-&nbsp&nbsp&nbsp
-<a href="resc.html">R E S O U R C E S</a>
+&nbsp
+
+<!-- dropdown container -->
+<div class="dropdown">
+    <!-- trigger button -->
+    <button>R E S O U R C E S</button>
+
+    <!-- dropdown menu -->
+    <ul class="dropdown-menu">
+        <li><a href="http://www.amazon.com/All-My-Friends-Are-Dead/dp/0811874559/ref=sr_1_1?s=books&ie=UTF8&qid=1439990157&sr=1-1&keywords=all+my+friends+are+dead">Textbook</a></li>
+        <li><a href="resc.html">Music to Cry To</a></li>
+        <li><a href="https://piazza.com/">Piazza</a></li>
+    </ul>
+</div>
+
+
 
 
 
