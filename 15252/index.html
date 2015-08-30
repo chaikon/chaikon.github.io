@@ -70,12 +70,12 @@ button{
     list-style: none; /** Remove list bullets */
     width: 100%; /** Set the width to 100% of it's parent */
     padding: 0;
-    background-color: green;
+    background-color: #F8F8F8;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
-    background-color: lightgray;
+    background-color: #F8F8F8;
 }
 
 /** Button Styles **/
@@ -87,22 +87,18 @@ button{
     font-weight: lighter;
     font-size: 12px;
 
-    color: gray;
     background-color: white;
 }
 
 .dropdown button:hover{
     color: black;
+    background-color: #F8F8F8;
 }
 
 /** List Item Styles **/
 .dropdown a {
     display: block;
-    padding: 5px;
-    font-family: helvetica;
-    font-weight: 300;
-    text-decoration: none;
-
+    padding: 3px;
 }
 
 /** List Item Hover Styles **/
@@ -124,19 +120,19 @@ button{
 
 <hr style="visibility:hidden">
 
-<a href="#">H O M E</a>
+<a href="">H O M E</a>
 &nbsp&nbsp&nbsp
 <a href="lec.html">L E C T U R E S</a>
 &nbsp&nbsp&nbsp
 <a href="asgn.html">A S S I G N M E N T S</a>
 &nbsp&nbsp&nbsp
 <a href="staff.html">S T A F F</a>
-&nbsp
+&nbsp&nbsp&nbsp
 
 <!-- dropdown container -->
 <div class="dropdown">
     <!-- trigger button -->
-    <button>R E S O U R C E S</button>
+    <a>R E S O U R C E S</a>
 
     <!-- dropdown menu -->
     <ul class="dropdown-menu">
