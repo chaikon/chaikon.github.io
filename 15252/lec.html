@@ -54,6 +54,39 @@ tr{
     height: 30px
 }
 
+.drop{
+    position: relative;
+    background-color: white;
+    display: inline-block;
+}
+
+.drop .menu{
+    position: absolute;
+    margin: 0;
+    top: 100%;
+    display: none;
+    list-style: none; 
+    background-color: #F8F8f8; 
+    width: 100%;
+    padding: 0;
+}
+
+.drop:hover .menu{
+    display: block;
+}
+.drop a{
+    display: block;
+    padding: 3px;
+
+}
+
+.drop a:hover{
+    display: block;
+    padding: 3px;
+    background-color: lightblue;
+
+}
+
 </style>
 <body style="background-color:white;text-align:left;font-family:helvetica">
 
@@ -75,7 +108,15 @@ tr{
 &nbsp&nbsp&nbsp
 <a href="staff.html">S T A F F</a>
 &nbsp&nbsp&nbsp
-<a href="resc.html">R E S O U R C E S</a>
+<div class="drop">
+    <a href="#">R E S O U R C E S</a>
+        <ul class="menu">
+        <li><a href="http://www.amazon.com/All-My-Friends-Are-Dead/dp/0811874559/ref=sr_1_1?s=books&ie=UTF8&qid=1439990157&sr=1-1&keywords=all+my+friends+are+dead">Textbook</a></li>
+        <li><a href="resc.html">Music to Cry To</a></li>
+        <li><a href="https://piazza.com/">Piazza</a></li>
+        <li><a href="puns.html">A Long List of Lamentable Puns</a></li>
+    </ul>
+</div>
 
 
 
