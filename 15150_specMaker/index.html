@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>15-150 SpecMaker</title>
+	<link rel="icon" href="icon.png">
+	
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+	<!-- CSS Reset -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+
+	<!-- Milligram CSS minified -->
+	<link rel="stylesheet" href="milligram/dist/milligram.min.css">
+
+	<!-- You should properly set the path from the main file. -->
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<style>
+body {
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    vertical-align: middle;
+    word-wrap: break-word;
+    width: 800px;
+	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
+	font-weight: 300;
+}
+input{
+	width: 800px;
+}
+button{
+/*	background-color:orange;
+*/}
+
+</style>
+
+<body>
+
+<h1 style="color:orange"> 15-150 SpecMaker </h1>
+
+<!-- <p>Function Name </p> -->
+<input type="text" placeholder="Function Name" id="funName">
+
+<!-- <p>Function Type </p> -->
+<input type="text" placeholder="Function Type" id="funType">
+
+<!-- <p>Requires: </p> -->
+<input type="text" placeholder="Requires Statement" id="req">
+
+<!-- <p>Ensures: </p> -->
+<input type="text" placeholder="Ensures Statement" id="ens">
+<pre><code id="result">
+Your header should appear here
+</code></pre>
+<br>
+<!-- <button type="button" onclick="clear()">Clear</button>-->
+<button type="button" style="float:right" onclick="submit()">Submit</button>
+<br>
+<br>
+<br>
+<br>
+
+<p style="color:gray;" id="credLab">Made by me because I was too lazy to format specs. Uses <a href="https://milligram.github.io">Milligram</a> CSS framework</p>
+
+ <script>
+function submit() {
+	var text,name,type,req,ens;
+	text="324"
+
+  name = document.getElementById("funName").value;
+  type = document.getElementById("funType").value;
+  req = document.getElementById("req").value;
+  ens = document.getElementById("ens").value;
+  text="(* ".concat(name," : ",type,"\n"," * REQUIRES: ",req,"\n"," * ENSURES: ",ens," *)");
+  document.getElementById("result").innerHTML=text;
+}
+</script>
+
+
+
+
+</body>
+
+</html> 
