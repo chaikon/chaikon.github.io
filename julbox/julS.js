@@ -3,11 +3,12 @@ var jul=5;
 var oldJul;
 var score=0;
 var lives=3;
+var julNum = Math.floor((Math.random() * 5) + 1);
 
-document.getElementById('b5').src='jul.png';
+
+document.getElementById('b5').src='jul'+julNum+'.png';
 
 function choose(num){
-	console.log(num);
 	if (num==jul){
 		// alert("That is indeed Julie.");
 		document.getElementById('b'+jul).src='invisible.png';
@@ -16,10 +17,14 @@ function choose(num){
 		oldJul=jul;
 		jul=Math.floor((Math.random() * 16) + 1);
 		while (oldJul==jul){
-			oldJul=jul;
 			jul=Math.floor((Math.random() * 16) + 1);
 		}
-		document.getElementById('b'+jul).src='jul.png';
+		var oldjn=julNum;
+		while (julNum==oldjn){
+			julNum = Math.floor((Math.random() * 5) + 1);
+		}
+		document.getElementById('b'+jul).src='jul'+julNum+'.png';
+
 		document.getElementById('scoreBoard').innerHTML= "Score: "+score;
 	}
 
