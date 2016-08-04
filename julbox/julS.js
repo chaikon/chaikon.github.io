@@ -34,8 +34,8 @@ function choose(num){
 		document.getElementById('lives').innerHTML=liv;
 
 		if (lives<=0){
-			alert("Yu are ded")
 			window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+			alert("Yu are ded");
 
 		}
 
