@@ -17,6 +17,7 @@ function choose(num){
 		oldJul=jul;
 		jul=Math.floor((Math.random() * 16) + 1);
 		while (oldJul==jul){
+			oldJul=jul;
 			jul=Math.floor((Math.random() * 16) + 1);
 		}
 		var oldjn=julNum;
